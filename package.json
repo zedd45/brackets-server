@@ -1,0 +1,33 @@
+{
+  "name": "brackets-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/lab/bin/lab -v -S -a chai -T test/lab-es6.js -I \"__core-js_shared__\" -L -m 9000 -r console",
+    "test:watch": "npm run test -- --watch"
+  },
+  "engines": {
+    "node": ">=4.0"
+  },
+  "keywords": [],
+  "author": "Adam Brons",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.1.18",
+    "babel-core": "^6.1.20",
+    "babel-preset-es2015": "^6.1.18",
+    "chai": "^3.4.1",
+    "chai-immutable": "^1.5.2",
+    "lab": "^7.3.0",
+    "mocha": "^2.3.3"
+  },
+  "dependencies": {
+    "immutable": "^3.7.5"
+  }
+}
