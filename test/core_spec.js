@@ -56,23 +56,17 @@ describe('application logic', () => {
 
     describe('vote', () => {
 
-        it('create a tally for the voted entry', (done) => {
+        it('creates a tally for the voted entry', (done) => {
 
             const state = Map({
-                vote: Map({
-                    pair: List.of('Batman', 'Superman')
-                }),
-                entries: List()
+                pair: List.of('Batman', 'Superman')
             });
             const nextState = vote(state, 'Batman');
             expect(nextState).to.equal(Map({
-                vote: Map({
-                    pair: List.of('Batman', 'Superman'),
-                    tally: Map({
-                        'Batman': 1
-                    })
-                }),
-                entries: List()
+                pair: List.of('Batman', 'Superman'),
+                tally: Map({
+                    'Batman': 1
+                })
             }));
 
             done();
@@ -81,25 +75,19 @@ describe('application logic', () => {
         it('adds to existing tally for the voted entry', (done) => {
 
             const state = Map({
-                vote: Map({
-                    pair: List.of('Batman', 'Superman'),
-                    tally: Map({
-                        'Batman': 3,
-                        'Superman': 2
-                    })
-                }),
-                entries: List()
+                pair: List.of('Batman', 'Superman'),
+                tally: Map({
+                    'Batman': 3,
+                    'Superman': 2
+                })
             });
             const nextState = vote(state, 'Batman');
             expect(nextState).to.equal(Map({
-                vote: Map({
-                    pair: List.of('Batman', 'Superman'),
-                    tally: Map({
-                        'Batman': 4,
-                        'Superman': 2
-                    })
-                }),
-                entries: List()
+                pair: List.of('Batman', 'Superman'),
+                tally: Map({
+                    'Batman': 4,
+                    'Superman': 2
+                })
             }));
 
             done();
