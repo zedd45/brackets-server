@@ -1,17 +1,10 @@
-import {List, Map} from 'immutable';
 import Lab from 'lab';
-import Chai from 'chai';
-import ChaiImmutable from 'chai-immutable';
-
+import labToTDD from './lab-chai-helper';
+import {List, Map} from 'immutable';
 import {setEntries, next, vote} from '../lib/core';
 
-Chai.use(ChaiImmutable);
-const lab = exports.lab = Lab.script();
-const describe = lab.describe;
-const it = lab.it;
-const before = lab.before;
-const after = lab.after;
-const expect = Chai.expect;
+const {lab, describe, it, expect} = labToTDD(Lab);
+exports.lab = lab;
 
 describe('application logic', () => {
 
