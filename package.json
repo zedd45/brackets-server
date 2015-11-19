@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node_modules/rejoice/bin/rejoice -c config.json -r ./node_modules/babel-register -p ./lib",
     "test": "./node_modules/lab/bin/lab -v -S -a chai -T test/lab-es6.js -I \"__core-js_shared__\" -L -m 9000 -r console",
     "test:watch": "npm run test -- --watch"
   },
@@ -27,6 +28,12 @@
     "lab": "^7.3.0"
   },
   "dependencies": {
-    "immutable": "^3.7.5"
+    "babel-register": "^6.1.18",
+    "blipp": "^2.3.0",
+    "hapi": "^11.1.1",
+    "immutable": "^3.7.5",
+    "nes": "^1.2.1",
+    "redux": "^3.0.4",
+    "rejoice": "^2.2.1"
   }
 }

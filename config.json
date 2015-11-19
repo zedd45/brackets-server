@@ -1,0 +1,17 @@
+{
+  "connections": [
+    {
+      "port": 3000,
+      "routes": {
+        "timeout": {
+          "server": 10000
+        }
+      }
+    }
+  ],
+  "plugins": {
+    "blipp": {},
+    "nes": {},
+    "./vote": {}
+  }
+}
