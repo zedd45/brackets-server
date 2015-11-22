@@ -10,8 +10,18 @@
     }
   ],
   "plugins": {
+    "good": {
+      "opsInterval": 5000,
+      "requestHeaders": true,
+      "reporters": [{
+        "reporter": "good-console",
+        "events": { "error": "*", "log": "*", "request": "*", "response": "*", "wreck": "*" }
+      }]
+    },
     "blipp": {},
-    "nes": {},
+    "nes": {
+      "auth": false
+      },
     "./vote": {}
   }
 }
