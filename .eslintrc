@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "eslint-config-hapi",
+    "import"
+  ],
+  "ecmaFeatures": {
+    "modules": true
+  }
+}
